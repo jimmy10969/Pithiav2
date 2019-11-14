@@ -32,7 +32,7 @@ public class Pithiav2 {
         //ihu.saveMathimata();
         ihu.loadxrhstes();
         ihu.loadMathimata();
-        ihu.savedhlwseis();
+        //ihu.savedhlwseis();
         ihu.loaddhlwseis();
         dhlwseis=ihu.getDhlwseis();
         mathimata=ihu.getMathimata();
@@ -47,7 +47,7 @@ public class Pithiav2 {
              System.out.println(mathimata.get(i).getName());
          }
          for (int i =0;i<dhlwseis.size();i++){
-             System.out.println(dhlwseis.get(i));
+             System.out.println(dhlwseis.get(i).getvathmos());
          }
          
          

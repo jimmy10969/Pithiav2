@@ -108,7 +108,7 @@ public class VathmologiaUI extends javax.swing.JFrame {
         jPanel1.setVisible(true);
         jPanel1.setSize(500,500);
         
-        Object[] columns = {"Mathima","Xronia"};
+        Object[] columns = {"Mathima","Xronia","Kathigitis","Vathmos"};
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
         logtable.setModel(model);

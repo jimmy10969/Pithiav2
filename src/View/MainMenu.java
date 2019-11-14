@@ -105,6 +105,10 @@ public class MainMenu extends javax.swing.JFrame {
             mathitis=new MathitisUI((Foititis)user);
             mathitis.setVisible(true);
         }
+        else if (user instanceof Kathigitis){
+            kath=new KathigitisUI((Kathigitis)user);
+            kath.setVisible(true);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -154,6 +158,7 @@ public class MainMenu extends javax.swing.JFrame {
     
     GrammateiaUI grammateia = new GrammateiaUI();
     MathitisUI mathitis ;
+    KathigitisUI kath;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

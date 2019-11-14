@@ -166,6 +166,9 @@ public class Idryma {
     public void addDhlwsh(Dhlwsh dhlwsh){
         dhlwseis.add(dhlwsh);
     }
+    public void setdhlwseis(ArrayList<Dhlwsh> dhl){
+        dhlwseis=dhl;
+    }
     
 }
 

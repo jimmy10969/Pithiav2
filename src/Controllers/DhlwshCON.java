@@ -58,7 +58,7 @@ public class DhlwshCON {
         mathima = null;
         for (int i=0;i<mathimata.size();i++) {
             if (mathimata.get(i).getName().equals(name) ){                
-                Dhlwsh dhlwsh = new Dhlwsh((Foititis)user,mathimata.get(i),year,0);                
+                Dhlwsh dhlwsh = new Dhlwsh((Foititis)user,mathimata.get(i),year,-1);                
                 ihu.addDhlwsh(dhlwsh);
                 ihu.savedhlwseis();
             }
