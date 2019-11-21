@@ -169,6 +169,9 @@ public class Idryma {
     public void setdhlwseis(ArrayList<Dhlwsh> dhl){
         dhlwseis=dhl;
     }
+    public void setxrhstes(ArrayList<User> acc){
+        xrhstes=acc;
+    }
     
 }
 

@@ -18,7 +18,7 @@ public class AddVathmosCON {
     private Kathigitis user;
     private Idryma ihu = new Idryma("IHU");
     private ArrayList <Mathima> mathimata;
-    private ArrayList<String> mathkat = new ArrayList<String>();    
+    private ArrayList<Mathima> mathkat = new ArrayList<Mathima>();    
     private ArrayList <Dhlwsh> dhlwseis;
     private ArrayList<String> foitites= new ArrayList<String>();  
     
@@ -29,22 +29,17 @@ public class AddVathmosCON {
         ihu.loaddhlwseis();
         mathimata=ihu.getMathimata();
         dhlwseis=ihu.getDhlwseis();        
+        user.setmath(mathimata);
+        mathkat=user.getmath();
         
-        mathkath();
+        
         
         uiVathmos = new AddVathmosUI(this);
         uiVathmos.setVisible(true);
     
     }
     
-    private void mathkath(){
-        for(int i=0;i<mathimata.size();i++){
-            if(mathimata.get(i).getKath().getusername().equals(user.getusername())){
-                mathkat.add(mathimata.get(i).getName());
-            }
-        }
-    }
-    public ArrayList<String> getMathimata(){
+        public ArrayList<Mathima> getMathimata(){
         return mathkat;
     }
     public ArrayList<String> getFoitites(){

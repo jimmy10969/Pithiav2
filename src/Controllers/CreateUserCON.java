@@ -36,4 +36,27 @@ public class CreateUserCON {
         accounts =ihu.getUsers();
         
     }
+    public void addfoititi(Foititis user1){
+        ihu.addUser(user1);
+        ihu.savexrhstes();
+        ihu.loadxrhstes();
+        accounts =ihu.getUsers();
+        
+    }
+    public void addkathigiti(Kathigitis user1){
+        ihu.addUser(user1);
+        ihu.savexrhstes();
+        ihu.loadxrhstes();
+        accounts =ihu.getUsers();
+        
+    }
+    
+    public boolean check(String username){
+        for (int i=0;i<accounts.size();i++){
+            if(username.equals(accounts.get(i).getusername())){
+                return false;
+            }
+        }
+        return true;
+    }
 }

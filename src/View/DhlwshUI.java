@@ -139,8 +139,10 @@ public class DhlwshUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        if(cDhlwsh.getcurrent().size()<8){
         cDhlwsh.adddhlwsh(String.valueOf(jComboBox2.getSelectedItem()));
         jComboBox2.removeItemAt(jComboBox2.getSelectedIndex());
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -154,10 +156,18 @@ public class DhlwshUI extends javax.swing.JFrame {
         logtable.setModel(model);
         Object[] row = new Object[4];       
         
-          for(int i=0;i<cDhlwsh.getDhlwmena().size();i++){
+         /* for(int i=0;i<cDhlwsh.getDhlwmena().size();i++){
+              if(cDhlwsh.getDhlwmena().get(i).getetos()==cDhlwsh.getYear()){
             row[0]=cDhlwsh.getDhlwmena().get(i).getMathima().getName();
             row[1]=cDhlwsh.getDhlwmena().get(i).getetos();
             model.addRow(row);
+              }
+        */
+         for(int i=0;i<cDhlwsh.getcurrent().size();i++){              
+            row[0]=cDhlwsh.getcurrent().get(i).getMathima().getName();
+            row[1]=cDhlwsh.getcurrent().get(i).getetos();
+            model.addRow(row);
+              
           }
            
             

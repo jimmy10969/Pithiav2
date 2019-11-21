@@ -11,12 +11,12 @@ import java.util.*;
  * @author Gloft
  */
 public class Kathigitis extends User {
-    
+    static final long serialVersionUID = 1L;
     private String etos_pros;
     private String am;
     private ArrayList<Mathima> mathimata= new ArrayList<Mathima>();
     
-    Kathigitis(){}
+    public Kathigitis(){}
     
     public Kathigitis(String username,String password,String fname,String lname,String adress,String tel,Sxolh sxolh,String etos_pros,String am){
         super(username,password,fname,lname,adress,tel,sxolh);
@@ -34,5 +34,21 @@ public class Kathigitis extends User {
     }
     public void setam(String am){
         this.am = am;
+    }
+    public void setmath(ArrayList<Mathima> math){
+        for(int i=0;i<math.size();i++){
+            if(math.get(i).getKath().getusername().equals(this.getusername())){
+                mathimata.add(math.get(i));
+            }
+        }
+    }
+    public ArrayList<Mathima> getmath(){
+        return mathimata;
+    }
+    public String getetos(){
+        return etos_pros;
+    }
+    public String getam(){
+        return am;
     }
 }

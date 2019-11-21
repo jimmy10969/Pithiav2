@@ -40,7 +40,7 @@ public class LoginUI extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         tMessage = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         usernametext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +56,11 @@ public class LoginUI extends javax.swing.JFrame {
         });
 
         jButton2.setText("Cancel");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,17 +107,18 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        user=cLogin.Login(usernametext.getText(), passwordtext.getText());        
-        /*if (user!=null){    
-            if (user instanceof Foititis){            
-            new test().setVisible(true);
-                       
+        user=cLogin.Login(usernametext.getText(), passwordtext.getText()); 
+        if (user!=null){   
+            this.dispose();
         }
-        showMsg("lathos kwdikoi");        
-        
-        }*/
+        else showMsg("Λαθος");
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
     
     public void showMsg(String msg) {
         tMessage.setText(msg);

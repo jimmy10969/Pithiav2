@@ -11,8 +11,7 @@ import java.io.*;
  *
  * @author jimmy
  */
-public class User implements Serializable{
-     static final long serialVersionUID = 1L;
+public class User implements Serializable{     
     private String username;
     private String password;
     private String fname;

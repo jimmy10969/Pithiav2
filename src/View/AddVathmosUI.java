@@ -23,8 +23,10 @@ public class AddVathmosUI extends javax.swing.JFrame {
     private ArrayList<String> foitnames=new ArrayList<String>();
 
     public AddVathmosUI(AddVathmosCON cVathmos) {
-        this.cVathmos=cVathmos;
-        mathnames=cVathmos.getMathimata();
+        this.cVathmos=cVathmos;        
+        for ( int i=0;i<cVathmos.getMathimata().size();i++){
+            mathnames.add(cVathmos.getMathimata().get(i).getName());
+        }
         
         initComponents();
     }

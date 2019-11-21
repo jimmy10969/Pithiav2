@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/View/VathmologiaUI.java</file>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/Controllers/VathmologiaCON.java</file>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/Controllers/AddVathmosCON.java</file>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/View/AddVathmosUI.java</file>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/pithiav2/Pithiav2.java</file>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/View/DhlwshUI.java</file>
-            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/Model/Idryma.java</file>
+            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/View/SearchuserUI.java</file>
+            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/Controllers/SearchuserCON.java</file>
+            <file>file:/C:/Users/jimmy/Documents/NetBeansProjects/Pithiav2/src/Model/User.java</file>
         </group>
     </open-files>
 </project-private>

@@ -22,7 +22,8 @@ public class DhlwshCON {
     private ArrayList <String> mdmathimata= new ArrayList<String>();
     private ArrayList <String> dmathimata= new ArrayList<String>();
     private ArrayList <Dhlwsh> dhlwseis;
-    private ArrayList <Dhlwsh> dhlwmena=new ArrayList<Dhlwsh>(); 
+    private ArrayList <Dhlwsh> dhlwmena=new ArrayList<Dhlwsh>();
+    private ArrayList <Dhlwsh> currentdhlwmena=new ArrayList<Dhlwsh>(); 
     private User user;
     private Mathima mathima;
     private final int year= LocalDate.now().getYear();
@@ -36,6 +37,7 @@ public class DhlwshCON {
         
         dhlwmena();
         midhlwmena();
+        currentdhlwsh();
         
         uiDilwsh = new DhlwshUI(this,foititis);
         uiDilwsh.setVisible(true);
@@ -61,6 +63,7 @@ public class DhlwshCON {
                 Dhlwsh dhlwsh = new Dhlwsh((Foititis)user,mathimata.get(i),year,-1);                
                 ihu.addDhlwsh(dhlwsh);
                 ihu.savedhlwseis();
+                currentdhlwmena.add(dhlwsh);
             }
         }         
         
@@ -69,8 +72,7 @@ public class DhlwshCON {
         for(int i=0;i<dhlwseis.size();i++){
             //if(foititis.getusername()==(dhlwseis.get(i).getFoititis().getusername())){
             if(dhlwseis.get(i).getFoititis().getusername().equals(user.getusername()) ){
-                dhlwmena.add(dhlwseis.get(i));
-                
+                dhlwmena.add(dhlwseis.get(i));                
             }
         }
     }
@@ -80,18 +82,29 @@ public class DhlwshCON {
                 if(year==dhlwmena.get(j).getetos()||dhlwmena.get(j).getvathmos()>5){
                 dmathimata.add(dhlwmena.get(j).getMathima().getName());
                 }
-                }
-         ArrayList <String> mathimat= new ArrayList<String>();
+        }
+        ArrayList <String> mathimat= new ArrayList<String>();
         for (int i=0;i<mathimata.size();i++){
-            mathimat.add(mathimata.get(i).getName());
-            
+            mathimat.add(mathimata.get(i).getName());            
         }
         mathimat.removeAll(dmathimata);
-        mdmathimata=mathimat;
-        
-        
-        
+        mdmathimata=mathimat;    
+    }
+    
+    public int getYear(){
+        return year;
+    }
+    
+    public void currentdhlwsh(){
+        for(int i=0;i<dhlwmena.size();i++){            
+            if(dhlwmena.get(i).getetos()==getYear() ){
+                currentdhlwmena.add(dhlwmena.get(i));                
             }
+        }
+    }
+    public ArrayList<Dhlwsh> getcurrent(){
+        return currentdhlwmena;
+    }
             
         }
     

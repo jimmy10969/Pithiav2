@@ -12,13 +12,14 @@ import java.util.*;
  * @author Gloft
  */
 public class Foititis extends User {
+    static final long serialVersionUID = 10L;
     private String etos_eis;
     private int didaktikes;
     private String am;
     private ArrayList<Dhlwsh> dhlwseis = new ArrayList<Dhlwsh>();
 
     
-    Foititis(){}
+    public Foititis(){}
     
     public Foititis(String username,String password,String fname,String lname,String adress,String tel,Sxolh sxolh,String etos_eis,int didaktikes,String am){
         super(username,password,fname,lname,adress,tel,sxolh);

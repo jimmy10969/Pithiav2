@@ -28,18 +28,11 @@ public class LoginCΟΝ {
             }
         }         
         return null;
-    }
-    
-   
-    
-    
-    
-    
-    public void makeNewAccount() {
-        // κλήση UC02MakeNewAccount
-    }
+    }           
+        
     
     public User getUser() { 
        return user;
+       
     }
 }

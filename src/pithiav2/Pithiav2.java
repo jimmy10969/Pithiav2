@@ -27,7 +27,7 @@ public class Pithiav2 {
         // TODO code application logic here
        Idryma ihu = new Idryma("IHU");
         
-        ihu.create();
+        //ihu.create();
         //ihu.savexrhstes();
         //ihu.saveMathimata();
         ihu.loadxrhstes();
@@ -41,7 +41,7 @@ public class Pithiav2 {
         for (int i =0;i<accounts.size();i++){
              System.out.println(accounts.get(i));
          }
-         System.out.println(accounts.get(0) instanceof Kathigitis);
+         System.out.println(accounts.get(7) instanceof Foititis);
          
          for (int i =0;i<mathimata.size();i++){
              System.out.println(mathimata.get(i).getName());

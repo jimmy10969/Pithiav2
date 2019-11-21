@@ -17,7 +17,7 @@ public class MainMenu extends javax.swing.JFrame {
     
     private static LoginCΟΝ cLogin;
     private static User user;
-    
+    private static ChangePassCON pas;
     
     public MainMenu() {
         initComponents();
@@ -32,30 +32,38 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        loginbutton = new javax.swing.JButton();
+        menubutton = new javax.swing.JButton();
+        logoutbutton = new javax.swing.JButton();
+        changepassbutton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Log-IN");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginbutton.setText("Log-in");
+        loginbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginbuttonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Menu");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        menubutton.setText("Menu");
+        menubutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                menubuttonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        logoutbutton.setText("Log-out");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                logoutbuttonActionPerformed(evt);
+            }
+        });
+
+        changepassbutton.setText("change pass");
+        changepassbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changepassbuttonActionPerformed(evt);
             }
         });
 
@@ -66,38 +74,45 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(140, 140, 140)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(loginbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menubutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(27, 27, 27)
-                .addComponent(jButton3)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(logoutbutton)
+                    .addComponent(changepassbutton))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(72, 72, 72)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginbutton)
+                    .addComponent(changepassbutton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(menubutton)
+                    .addComponent(logoutbutton))
                 .addContainerGap(164, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
         // TODO add your handling code here:
+        if(cLogin==null){
         cLogin = new LoginCΟΝ();
-        
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
         user=cLogin.getUser();
+        }
+        
+        
+        
+    }//GEN-LAST:event_loginbuttonActionPerformed
+
+    private void menubuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menubuttonActionPerformed
+        // TODO add your handling code here:
+        user=cLogin.getUser();        
         if (user instanceof Grammateia){         
             grammateia.setVisible(true);           
             }
@@ -109,17 +124,20 @@ public class MainMenu extends javax.swing.JFrame {
             kath=new KathigitisUI((Kathigitis)user);
             kath.setVisible(true);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_menubuttonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        //if (test1.isVisible()){
-          //  test1.dispose();
-            //test1 = new test();
-            
-            
-        //}
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
+        user=null;
+        cLogin=null;
+    }//GEN-LAST:event_logoutbuttonActionPerformed
+
+    private void changepassbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changepassbuttonActionPerformed
+        // TODO add your handling code here:        
+        user=cLogin.getUser();
+        if(user!=null){
+        pas= new ChangePassCON(user);
+        }
+    }//GEN-LAST:event_changepassbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,12 +175,13 @@ public class MainMenu extends javax.swing.JFrame {
     }
     
     GrammateiaUI grammateia = new GrammateiaUI();
-    MathitisUI mathitis ;
+    MathitisUI mathitis;
     KathigitisUI kath;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton changepassbutton;
+    private javax.swing.JButton loginbutton;
+    private javax.swing.JButton logoutbutton;
+    private javax.swing.JButton menubutton;
     // End of variables declaration//GEN-END:variables
 }
