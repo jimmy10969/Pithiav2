@@ -17,12 +17,14 @@ public class CreateUserUI extends javax.swing.JFrame {
     /**
      * Creates new form CreateUserCON
      */
-    private static CreateUserCON cUser;   
+    private static CreateUserCON cUser;
+    private static Grammateia gram;
      
-    private Sxolh IT = new Sxolh(1,"Pliroforiki","it@ihu.gr","2310123456");
+    
      
-    public CreateUserUI(CreateUserCON cUser) {
+    public CreateUserUI(CreateUserCON cUser,Grammateia grammateia) {
         this.cUser = cUser;
+        gram=grammateia;
         initComponents();
     }
 
@@ -188,7 +190,7 @@ public class CreateUserUI extends javax.swing.JFrame {
         user.setlname(epithetotxt.getText());
         user.setadress(addresstxt.getText());
         user.settel(teltxt.getText());
-        user.setsxolh(IT);        
+        user.setsxolh(gram.getsxolh());        
         user.setdidaktikes(0);
         user.setetos_pros(etostxt.getText());
         user.setam(amtxt.getText());
@@ -202,7 +204,7 @@ public class CreateUserUI extends javax.swing.JFrame {
         user.setlname(epithetotxt.getText());
         user.setadress(addresstxt.getText());
         user.settel(teltxt.getText());
-        user.setsxolh(IT);   
+        user.setsxolh(gram.getsxolh());   
         user.setetos_pros(etostxt.getText());
         user.setam(amtxt.getText());
         cUser.addkathigiti(user);

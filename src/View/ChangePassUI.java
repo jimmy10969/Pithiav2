@@ -35,29 +35,17 @@ public class ChangePassUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        oldPass = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        newPass = new javax.swing.JTextField();
-        newPass2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         confButton = new javax.swing.JButton();
+        oldPass = new javax.swing.JPasswordField();
+        newPass = new javax.swing.JPasswordField();
+        newPass2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        oldPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                oldPassActionPerformed(evt);
-            }
-        });
-
         jLabel1.setText("Old Pass");
-
-        newPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newPassActionPerformed(evt);
-            }
-        });
 
         jLabel2.setText("New pass");
 
@@ -77,12 +65,6 @@ public class ChangePassUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(newPass2, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                            .addComponent(newPass)
-                            .addComponent(oldPass)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(236, 236, 236)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
@@ -93,17 +75,23 @@ public class ChangePassUI extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(228, 228, 228)
-                        .addComponent(confButton)))
-                .addContainerGap(155, Short.MAX_VALUE))
+                        .addComponent(confButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(oldPass)
+                            .addComponent(newPass)
+                            .addComponent(newPass2, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(oldPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
                 .addComponent(jLabel2)
                 .addGap(2, 2, 2)
                 .addComponent(newPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,14 +106,6 @@ public class ChangePassUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void oldPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oldPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_oldPassActionPerformed
-
-    private void newPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_newPassActionPerformed
 
     private void confButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confButtonMouseClicked
     if (oldPass.getText().equals(user.getpassword()) && newPass.getText().compareTo(newPass2.getText())==0)
@@ -177,8 +157,8 @@ public class ChangePassUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField newPass;
-    private javax.swing.JTextField newPass2;
-    private javax.swing.JTextField oldPass;
+    private javax.swing.JPasswordField newPass;
+    private javax.swing.JPasswordField newPass2;
+    private javax.swing.JPasswordField oldPass;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,14 +18,14 @@ public class CreateUserCON {
     private CreateUserUI uiUser;
     private Idryma ihu = new Idryma("IHU");    
     private ArrayList <User> accounts ;
-    private User user;
+    private Grammateia gram;
    
     
-    public CreateUserCON() {    
-               
+    public CreateUserCON(Grammateia grammateia) {    
+        this.gram=grammateia;
         ihu.loadxrhstes();        
         accounts =ihu.getUsers();
-        uiUser = new CreateUserUI(this);
+        uiUser = new CreateUserUI(this,gram);
         uiUser.setVisible(true);
     } 
     

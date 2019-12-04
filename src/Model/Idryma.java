@@ -39,7 +39,7 @@ public class Idryma {
         Kathigitis K5 = new Kathigitis("it004580","0000","Mathaios ","Sperou","Thessaloniki","2310201205",IT,"2001","004580");
         Foititis F1= new Foititis("it174886","0000","Jim","Carrey","Thessaloniki","2310123456",IT,"2017",0,"174886");
         Grammateia G1 = new Grammateia("IT","0000","Michael","Jordan","Thessaloniki","2310123456",IT,"2017");
-        Mathima M1 =new Mathima(1,"mixaniki logismikou",K1,5);
+        Mathima M1 =new Mathima("1","mixaniki logismikou",K1,5);
         Dhlwsh D1 = new Dhlwsh(F1,M1,2017,7);
         public  void create(){
         

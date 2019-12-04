@@ -113,7 +113,8 @@ public class MainMenu extends javax.swing.JFrame {
     private void menubuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menubuttonActionPerformed
         // TODO add your handling code here:
         user=cLogin.getUser();        
-        if (user instanceof Grammateia){         
+        if (user instanceof Grammateia){
+            grammateia=new GrammateiaUI((Grammateia)user);
             grammateia.setVisible(true);           
             }
         else if (user instanceof Foititis){            
@@ -174,7 +175,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
     }
     
-    GrammateiaUI grammateia = new GrammateiaUI();
+    GrammateiaUI grammateia;
     MathitisUI mathitis;
     KathigitisUI kath;
 

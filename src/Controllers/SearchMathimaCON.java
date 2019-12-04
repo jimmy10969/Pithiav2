@@ -21,13 +21,23 @@ public class SearchMathimaCON {
     private Idryma ihu = new Idryma("IHU");    
     private ArrayList <Mathima> mathimata ;
     private Mathima  mathima;
+    private Grammateia grammateia;
+    private ArrayList<User> kathigites=new ArrayList<User>();
     
     
-    public SearchMathimaCON() {    
-               
+    public SearchMathimaCON(Grammateia grammateia) {    
+        this.grammateia=grammateia;  
+        ihu.loadxrhstes();
+        ArrayList<User> users;
+        users=ihu.getUsers();
+        for (int i=0;i<users.size();i++){
+            if(users.get(i) instanceof Kathigitis){
+                kathigites.add(users.get(i));
+            }
+        }
         ihu.loadMathimata();
         mathimata =ihu.getMathimata();
-        uiMath = new SearchMathimaUI(this);
+        uiMath = new SearchMathimaUI(this,grammateia);
         uiMath.setVisible(true);
     }
     
@@ -51,6 +61,12 @@ public class SearchMathimaCON {
     }
     public Mathima getMathima(){
         return mathima;
+    }
+    public ArrayList<User> getKathigites(){
+        return kathigites;
+    }
+    public ArrayList<Mathima> getMathimata(){
+        return mathimata;
     }
     public void addmathima(Mathima math1){
         ihu.addMathima(math1);

@@ -30,10 +30,8 @@ public class AddVathmosCON {
         mathimata=ihu.getMathimata();
         dhlwseis=ihu.getDhlwseis();        
         user.setmath(mathimata);
-        mathkat=user.getmath();
-        
-        
-        
+        mathkat=user.getmath();   
+               
         uiVathmos = new AddVathmosUI(this);
         uiVathmos.setVisible(true);
     

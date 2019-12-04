@@ -41,11 +41,13 @@ public class Pithiav2 {
         for (int i =0;i<accounts.size();i++){
              System.out.println(accounts.get(i));
          }
-         System.out.println(accounts.get(7) instanceof Foititis);
+         System.out.println(accounts.get(0) instanceof Kathigitis);
          
          for (int i =0;i<mathimata.size();i++){
              System.out.println(mathimata.get(i).getName());
          }
+         Theoria th=(Theoria)mathimata.get(2);
+         System.out.println(th.getProapaitoumena());
          for (int i =0;i<dhlwseis.size();i++){
              System.out.println(dhlwseis.get(i).getvathmos());
          }

@@ -11,15 +11,15 @@ import java.util.*;
  * @author jimmy
  */
 public class Mathima implements Serializable{    
-    int id;
-    String name;
-    Kathigitis kath;
-    int examino;
+    private String id;
+    private String name;
+    private Kathigitis kath;
+    private int examino;
     private ArrayList<Dhlwsh> dhlwseis = new ArrayList<Dhlwsh>();
     
    public Mathima(){      
    }
-    public Mathima(int id,String name,Kathigitis kath,int examino)
+    public Mathima(String id,String name,Kathigitis kath,int examino)
     {
     this.id=id;
     this.name=name;
@@ -27,8 +27,12 @@ public class Mathima implements Serializable{
     this.examino=examino;
     
     }
+    public Mathima(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
  
-    public int getId() {
+    public String getId() {
         return id;
     }
  
@@ -46,7 +50,7 @@ public class Mathima implements Serializable{
  
     
  
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
  

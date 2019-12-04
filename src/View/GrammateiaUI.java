@@ -19,10 +19,11 @@ public class GrammateiaUI extends javax.swing.JFrame {
      */
     private static CreateUserCON cUser;
     private static SearchuserCON cSUser;
-    private static SearchMathimaCON csMath;
-    private static User user;
+    private static SearchMathimaCON csMath;    
+    private Grammateia user;
     
-    public GrammateiaUI() {
+    public GrammateiaUI(Grammateia grammateia) {
+        user=grammateia;
         initComponents();
     }
 
@@ -91,17 +92,17 @@ public class GrammateiaUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        cUser = new CreateUserCON();
+        cUser = new CreateUserCON(user);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        cSUser = new SearchuserCON();
+        cSUser = new SearchuserCON(user);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        csMath = new SearchMathimaCON();
+        csMath = new SearchMathimaCON(user);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -134,7 +135,7 @@ public class GrammateiaUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GrammateiaUI().setVisible(true);
+                //new GrammateiaUI().setVisible(true);
             }
         });
     }

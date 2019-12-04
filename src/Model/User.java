@@ -31,6 +31,10 @@ public class User implements Serializable{
         this.tel=tel;
         this.sxolh=sxolh;
     }
+     public User(String epwnymo, String onoma) {        
+        this.fname = onoma;
+        this.lname = epwnymo;
+    }
     
     public void setusername(String username){
         this.username=username;
